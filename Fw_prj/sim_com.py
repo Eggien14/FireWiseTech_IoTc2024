@@ -60,6 +60,7 @@ def make_call(number):
         print("Failed to make call")
 
 if __name__ == "__main__":
+    TEST_NUMBER = "0xxxxxxxxx"  # put a test phone number here
     init_sim()
     if serial_conn:
         if check_sim():
@@ -67,10 +68,8 @@ if __name__ == "__main__":
         else:
             print("Failed to initialize SIM module.")
         
-        #send_sms("0363802865","dmm")
-        # make_call("0387015635")
-        make_call("0363802865")
-#0363802865
+        #send_sms(TEST_NUMBER, "test")
+        make_call(TEST_NUMBER)
         serial_conn.close()
     else:
         print("Failed to initialize serial connection")

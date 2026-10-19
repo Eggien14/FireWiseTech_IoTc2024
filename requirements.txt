@@ -1,0 +1,5 @@
+# Python 3.11 on Raspberry Pi OS. RPi.GPIO comes with Raspberry Pi OS
+# (create the venv with --system-site-packages) or: pip install RPi.GPIO
+firebase-admin==6.5.0
+pyserial==3.5
+pexpect==4.9.0

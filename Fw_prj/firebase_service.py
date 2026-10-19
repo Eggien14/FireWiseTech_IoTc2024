@@ -8,9 +8,9 @@ from Utility.gen_system import get_raspberry_pi_serial_number, generate_unique_k
 import config
 
 # Initialize Firebase Admin
-cred = credentials.Certificate('/home/pi/documents/Python/Fw_prj/Utility/fire-cloud-f2f21-firebase-adminsdk-7gyx2-bb48bdd146.json')
+cred = credentials.Certificate(config.FIREBASE_CREDENTIALS)
 initialize_app(cred, {
-    'databaseURL': 'https://fire-cloud-f2f21-default-rtdb.asia-southeast1.firebasedatabase.app/'
+    'databaseURL': config.FIREBASE_DATABASE_URL
 })
 
 init_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

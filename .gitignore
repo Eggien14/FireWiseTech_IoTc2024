@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+myenv/
+venv/
+.venv/
+
+# Local settings and secrets (see .env.example)
+.env
+Fw_prj/.env
+*adminsdk*.json
+Fw_prj/Utility/phone_numbers.json
+
+# Runtime logs
+Fw_prj/Logs/*.txt
+!Fw_prj/Logs/log_data.txt
+!Fw_prj/Logs/log_z3gw.txt

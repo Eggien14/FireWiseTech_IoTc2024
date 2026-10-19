@@ -1,13 +1,20 @@
-# Firebase configuration details
+import os
+
+# Firebase settings are read from environment variables (see README and .env.example).
+# Do not write real keys in this file.
+FIREBASE_DATABASE_URL = os.getenv("FIREBASE_DATABASE_URL", "")
+FIREBASE_CREDENTIALS = os.getenv(
+    "FIREBASE_CREDENTIALS",
+    "/home/pi/documents/Python/Fw_prj/Utility/firebase-adminsdk.json",  # service-account file, kept out of git
+)
 FIREBASE_CONFIG = {
-    "apiKey": "AIzaSyAU5pfDocy-74rskYxODvo79jQ030aImA4",
-    "authDomain": "fire-cloud-f2f21.firebaseapp.com",
-    "databaseURL": "https://fire-cloud-f2f21-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "projectId": "fire-cloud-f2f21",
-    "storageBucket": "fire-cloud-f2f21.appspot.com",
-    "messagingSenderId": "533473486533",
-    "appId": "1:533473486533:web:a221561b59117991e9b2ac",
-    "measurementId": "G-EQTTGGR0FR"
+    "apiKey": os.getenv("FIREBASE_API_KEY", ""),
+    "authDomain": os.getenv("FIREBASE_AUTH_DOMAIN", ""),
+    "databaseURL": FIREBASE_DATABASE_URL,
+    "projectId": os.getenv("FIREBASE_PROJECT_ID", ""),
+    "storageBucket": os.getenv("FIREBASE_STORAGE_BUCKET", ""),
+    "messagingSenderId": os.getenv("FIREBASE_MESSAGING_SENDER_ID", ""),
+    "appId": os.getenv("FIREBASE_APP_ID", ""),
 }
 START_NETWORK = [
     "plugin network-creator start 1",
