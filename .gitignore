@@ -49,3 +49,7 @@ app.*.map.json
 
 # Ignore Gradle build output directory
 build
+
+# Firebase config of your own project (download from the Firebase console)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
